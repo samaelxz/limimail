@@ -1,5 +1,5 @@
 <template>
-  <Menu active-name="1" style="height: 100%;overflow-y: scroll;width: 200px;">
+  <Menu active-name="1" style="height: 100%;overflow-y: auto;width: 200px;">
     <div style="padding: 20px 40px;position: relative;">
       <Button slot="default" type="primary" long style="height: 40px;font-size: 1em;padding-left: 30px;" size="large">compose</Button>
       <Icon type="compose" size=24 style="position: absolute;top: 28px;left: 50px;color: #FFF;"></Icon>
@@ -8,7 +8,7 @@
       <MenuItem name="1">
         <Icon type="ios-email-outline" size=24></Icon>
           Inbox
-      <Badge class="badge" count="24546"></Badge>
+      <Badge class="badge" count="189"></Badge>
       </MenuItem>
       <MenuItem name="2">
         <Icon type="ios-star-outline" size=24></Icon>

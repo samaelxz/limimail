@@ -59,7 +59,6 @@
                 <mail-card coloredBG="true"></mail-card>
                 <mail-card></mail-card>
                 <mail-card coloredBG="true"></mail-card>
-                <mail-card></mail-card>
                 <div class="page-container">
                   <Page :total="100"></Page>
                 </div>
@@ -77,21 +76,26 @@
                   <Col span="10">
                     <div>Darth Vader</div>
                     <Row>
-                      <Col span="20"><div><span>darthvad54645654654er@darkside.com</span> to me</div></Col>
-                      <Col span="4">
-                        <Dropdown placement="bottom-start">
-                          <a href="javascript:void(0)">
-                            <Icon type="arrow-down-b" size="18"></Icon>
-                          </a>
-                          <DropdownMenu slot="list">
-                            <DropdownItem>驴打滚</DropdownItem>
-                            <DropdownItem>炸酱面</DropdownItem>
-                            <DropdownItem>豆汁儿</DropdownItem>
-                            <DropdownItem>冰糖葫芦</DropdownItem>
-                            <DropdownItem>北京烤鸭</DropdownItem>
-                          </DropdownMenu>
-                        </Dropdown>
+                      <Col span="24">
+                        <div>
+                          <span>darthvader@darkside.com</span>
+                           to me
+                          <Dropdown placement="bottom-start">
+                            <a href="javascript:void(0)">
+                              <Icon type="arrow-down-b" size="18"></Icon>
+                            </a>
+                            <DropdownMenu slot="list">
+                              <span style="color: #bbbec4;display: inline-block;width: 100%;padding: 5px;">From</span>
+                              <DropdownItem>darthvader@darkside.com</DropdownItem>
+                              <span style="color: #bbbec4;display: inline-block;width: 100%;padding: 5px;border-top: 1px solid #eee;">To</span>
+                              <DropdownItem>darthvader@darkside.com</DropdownItem>
+                              <DropdownItem>me</DropdownItem>
+                            </DropdownMenu>
+                          </Dropdown>
+                         </div>
                       </Col>
+                      <!-- <Col span="4">
+                      </Col> -->
                     </Row>
                   </Col>
                   <Col span="12" style="text-align: right;">
@@ -110,14 +114,11 @@
                 <br>
               </div>
               <div class="mail-detail-append">
-                <div><span style="font-weight: 500;font-size: 1.2em;">Attachments</span><span style="color: #aaa;">(3 files, 680KB)</span></div>
+                <div style="margin-bottom: 10px;"><span style="font-weight: 500;font-size: 1.2em;">Attachments</span><span style="color: #aaa;">(3 files, 680KB)</span></div>
                 <div>
-                  <div style="line-height: 30px;height: 30px;">
-                    <Icon type="image" size="22" style="color: #aaa;" />
-                    <span>force.gif</span><span>(128KB)</span>
-                  </div>
-                  <Icon type="ionic" size="22" style="color: #aaa;" />
-                  <Icon type="social-youtube-outline" size="22" style="color: #aaa;" />
+                  <attachment-item></attachment-item>
+                  <attachment-item></attachment-item>
+                  <attachment-item></attachment-item>
                 </div>
               </div>
             </div>
@@ -136,9 +137,10 @@
 import SideBar from './SideBar'
 import TopBar from './TopBar'
 import MailCard from './MailCard'
+import AttachmentItem from './AttachmentItem'
 
 export default {
-  components: {SideBar, TopBar, MailCard},
+  components: {SideBar, TopBar, MailCard, AttachmentItem},
   data () {
     return {
       selectedState: false

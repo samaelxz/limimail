@@ -15,7 +15,7 @@
         <Col span="6">
           <Input icon="ios-search" style="width: 200px;"></Input>
         </Col>
-        <Col span="8">
+        <Col span="8" style="">
           <!-- <Submenu name="3">
             <template slot="title">
               <Icon type="ios-list"></Icon>
@@ -101,7 +101,7 @@
             </Dropdown>
           </Col>
         </Col>
-        <Col span="4">
+        <Col span="4" style="text-align: center;">
           Reading Mode
           <i-switch v-model="messageMode" on-change="toggleMode"></i-switch>
         </Col>
